@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT NIZZY</title>
+
+<style>
+body { margin:0; font-family:Segoe UI; background:#f2f9ff; }
+
+header {
+  background: linear-gradient(to right,#b3e0ff,#e6f7ff);
+  text-align:center;
+  padding:40px;
+}
+
+.logo {
+  font-size:3em;
+  font-weight:bold;
+  letter-spacing:3px;
+}
+
+nav {
+  background:white;
+  padding:15px;
+  text-align:center;
+}
+nav a {
+  margin:0 15px;
+  text-decoration:none;
+  color:black;
+  font-weight:bold;
+}
+
+.products {
+  padding:40px;
+  text-align:center;
+}
+
+.grid {
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+
+.card {
+  background:white;
+  width:250px;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+button {
+  background:black;
+  color:white;
+  border:none;
+  padding:10px;
+  cursor:pointer;
+}
+
+.cart {
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:black;
+  color:white;
+  padding:10px;
+}
+
+.instagram {
+  padding:40px;
+  text-align:center;
+}
+
+.contact {
+  background:black;
+  color:white;
+  padding:40px;
+  text-align:center;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="logo">IT NIZZY</div>
+  <p>Luxury Fashion • Premium Style</p>
+</header>
+
+<nav>
+  <a href="#shop">Shop</a>
+  <a href="#instagram">Instagram</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="cart">
+  Cart: £<span id="total">0</span>
+</div>
+
+<section id="shop" class="products">
+  <h2>Shop</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Designer Hoodie</h3>
+      <p>£50</p>
+      <button onclick="addToCart(50)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3>Luxury Tracksuit</h3>
+      <p>£120</p>
+      <button onclick="addToCart(120)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3>Streetwear Tee</h3>
+      <p>£35</p>
+      <button onclick="addToCart(35)">Add to Cart</button>
+    </div>
+
+  </div>
+
+  <br><br>
+  <button onclick="checkout()">Checkout</button>
+
+</section>
+
+<section id="instagram" class="instagram">
+  <h2>Follow Us on Instagram</h2>
+  <p>@itnizzy (add your real username)</p>
+
+  <!-- Instagram embed -->
+  <iframe src="https://www.instagram.com" width="300" height="400"></iframe>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+  <p>Email: chidieberechikezie8@gmail.com</p>
+  <p>Phone: 07391697352</p>
+</section>
+
+<script>
+let total = 0;
+
+function addToCart(price){
+  total += price;
+  document.getElementById("total").innerText = total;
+}
+
+function checkout(){
+  alert("Connect Stripe to accept payments!");
+}
+</script>
+
+</body>
+</html>
