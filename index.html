@@ -1,4 +1,18 @@
-<div class="product-card">
+let cart = [];
+
+function addJumpsuitToCart() {
+  let size = document.getElementById("size-jumpsuit").value;
+
+  cart.push({
+    name: "Women’s Denim Jumpsuit",
+    price: 47,
+    size: size
+  });
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  alert("Jumpsuit (Size " + size + ") added to cart!");
+}<div class="product-card">
   
   <img src="images/jumpsuit.jpg" alt="Denim Jumpsuit">
 
