@@ -1,4 +1,16 @@
-<!DOCTYPE html>
+let cart = [];
+
+function addToCart(product) {
+  cart.push(product);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Added to cart!");
+let cart = [];
+
+function addToCart(product) {
+  cart.push(product);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Added to cart!");
+}<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
